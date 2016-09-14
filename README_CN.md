@@ -1,6 +1,6 @@
 Name
 ====
-openwaf_reqstat-[openwaf](https://github.com/titansec/openwaf)的统计模块，对访问信息、安全信息、转发信息等进行统计
+openwaf_reqstat是[openwaf](https://github.com/titansec/openwaf)的统计模块，对访问信息、安全信息、转发信息等进行统计
 
 Table of Contents
 =================
