@@ -18,9 +18,6 @@ Synopsis
     local twaf_reqstat_m = require "lib.twaf.twaf_reqstat"
     twaf_reqstat = twaf_reqstat_m:new(config, policy_uuids)
     
-    -- app/openwaf_init_worker.lua
-    twaf_reqstat:init_worker()
-    
     -- app/api.lua
     api["get"]["reqstat"] = function() twaf_reqstat:reqstat_show_handler(policy_uuid) end
     api["delete"]["reqstat"] = function() twaf_reqstat:reqstat_clear() end
