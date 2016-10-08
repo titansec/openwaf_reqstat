@@ -9,7 +9,7 @@ Table of Contents
 * [Statistical information](#statistical-information)
 * [Prerequisite modules](#prerequisite-modules)
 * [Configuration Directives](#configuration-directives)
-* [Directives](#directives)
+* [API](#api)
 
 Synopsis
 ========
@@ -139,7 +139,7 @@ Configuration Directives
         "access_state":true,
         "upstream_state":true,
         "shared_dict_name":"twaf_reqshm",
-	"content_type":"JSON"
+        "content_type":"JSON"
     }
 ```
 [Back to TOC](#table-of-contents)
@@ -187,7 +187,7 @@ Configuration Directives
 
 **context:** *openwaf_reqstat*
 
-指定shared_dict名称，在这之前需在nginx配置文件中配置[lua_shared_dict](https://github.com/openresty/lua-nginx-module#lua_shared_dict) <name> <size>
+指定shared_dict名称，在这之前需在nginx配置文件中配置[lua_shared_dict](https://github.com/openresty/lua-nginx-module#lua_shared_dict) *<name> <size>*
 
 默认shared_dict名称为openwaf_reqshm
 
