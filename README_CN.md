@@ -187,7 +187,7 @@ Configuration Directives
 
 **context:** *openwaf_reqstat*
 
-指定shared_dict名称，在这之前需在nginx配置文件中配置[lua_shared_dict](https://github.com/openresty/lua-nginx-module#lua_shared_dict) *<name> <size>*
+指定shared_dict名称，在这之前需在nginx配置文件中配置[lua_shared_dict](https://github.com/openresty/lua-nginx-module#lua_shared_dict) <name> <size>
 
 默认shared_dict名称为openwaf_reqshm
 
@@ -198,14 +198,13 @@ Configuration Directives
 
 **context:** *openwaf_reqstat*
 
-
+指定统计信息输出格式，目前支持JSON和INFLUXDB两种格式
 
 [Back to TOC](#table-of-contents)
 
 API
 ===
 * [new](#new)
-* [init_worker](#init_worker)
 * [reqstat_log_handler](#reqstat_log_handler)
 * [reqstat_show_handler](#reqstat_show_handler)
 * [reqstat_clear](#reqstat_clear)
@@ -216,20 +215,36 @@ new
 ---
 **syntax:** *reqstat = new(self, config, policy_uuids)*
 
-init_worker
------------
-**syntax:** *reqstat:init_worker()*
+实例化统计对象
 
 reqstat_log_handler
 -------------------
 **syntax:** *reqstat:reqstat_log_handler(events, policy_uuid)*
 
+记录
+
 reqstat_show_handler
 --------------------
-**syntax:** *reqstat:reqstat_show_handler(policy_uuid)*
+**syntax:** *reqstat:reqstat_show_handler()*
+
+通过请求参数获取统计信息
+
+get_reqstat_main_info
+---------------------
+**syntax:** *reqstat:get_reqstat_main_info()*
+
+获取全局统计信息
+
+get_reqstat_uuid_info
+---------------------
+**syntax:** *reqstat:get_reqstat_uuid_info(uuids)*
+
+获取策略统计信息
 
 reqstat_clear
 -------------
 **syntax:** *reqstat:reqstat_clear()*
+
+清空统计信息
 
 [Back to TOC](#table-of-contents)
