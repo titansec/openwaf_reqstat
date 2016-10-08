@@ -207,6 +207,8 @@ API
 * [new](#new)
 * [reqstat_log_handler](#reqstat_log_handler)
 * [reqstat_show_handler](#reqstat_show_handler)
+* [get_reqstat_main_info](#get_reqstat_main_info)
+* [get_reqstat_uuid_info](#get_reqstat_uuid_info)
 * [reqstat_clear](#reqstat_clear)
 
 [Back to TOC](#table-of-contents)
