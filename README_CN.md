@@ -138,12 +138,8 @@ Configuration Directives
         "safe_state":true,
         "access_state":true,
         "upstream_state":true,
-        "shared_dict_name":"twaf_shm",
-        "global_uuid":"GLOBAL",
-        "redis_select":1,
-        "redis_ipaddr":"127.0.0.2",
-        "redis_port":60000,
-        "delay":10
+        "shared_dict_name":"twaf_reqshm",
+	"content_type":"JSON"
     }
 ```
 [Back to TOC](#table-of-contents)
@@ -191,48 +187,18 @@ Configuration Directives
 
 **context:** *openwaf_reqstat*
 
-指定shared_dict名称，在这之前需在nginx配置文件中配置lua_shared_dict <name> <size>
+指定shared_dict名称，在这之前需在nginx配置文件中配置[lua_shared_dict](https://github.com/openresty/lua-nginx-module#lua_shared_dict) <name> <size>
 
 默认shared_dict名称为openwaf_reqshm
 
-###global_uuid
-**syntax:** *global_uuid string*
+###content_type
+**syntax:** *content_type JSON|INFLUXDB*
 
-**default:** *GLOBAL*
-
-**context:** *openwaf_reqstat*
-
-指定全局统计的名称，用于在redis中查询
-
-默认名称为"GLOBAL"
-
-###upstream_state
-**syntax:** *upstream_state true|false|$dynamic_state*
-
-**default:** *true*
+**default:** *JSON*
 
 **context:** *openwaf_reqstat*
 
-###upstream_state
-**syntax:** *upstream_state true|false|$dynamic_state*
 
-**default:** *true*
-
-**context:** *openwaf_reqstat*
-
-###upstream_state
-**syntax:** *upstream_state true|false|$dynamic_state*
-
-**default:** *true*
-
-**context:** *openwaf_reqstat*
-
-###upstream_state
-**syntax:** *upstream_state true|false|$dynamic_state*
-
-**default:** *true*
-
-**context:** *openwaf_reqstat*
 
 [Back to TOC](#table-of-contents)
 
