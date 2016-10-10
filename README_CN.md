@@ -149,7 +149,7 @@ Configuration Directives
 
 **default:** *true*
 
-**context:** *openwaf_reqstat*
+**context:** *twaf_reqstat*
 
 统计模块开关，支持动态开关，默认开启
 
@@ -158,7 +158,7 @@ Configuration Directives
 
 **default:** *true*
 
-**context:** *openwaf_reqstat*
+**context:** *twaf_reqstat*
 
 访问信息统计开关，支持动态开关，默认开启
 
@@ -167,7 +167,7 @@ Configuration Directives
 
 **default:** *true*
 
-**context:** *openwaf_reqstat*
+**context:** *twaf_reqstat*
 
 安全信息统计开关，支持动态开关，默认开启
 
@@ -176,7 +176,7 @@ Configuration Directives
 
 **default:** *true*
 
-**context:** *openwaf_reqstat*
+**context:** *twaf_reqstat*
 
 转发信息统计开关，支持动态开关，默认开启
 
@@ -185,7 +185,7 @@ Configuration Directives
 
 **default:** *openwaf_reqshm*
 
-**context:** *openwaf_reqstat*
+**context:** *twaf_reqstat*
 
 指定shared_dict名称，在这之前需在nginx配置文件中配置[lua_shared_dict](https://github.com/openresty/lua-nginx-module#lua_shared_dict) <name> <size>
 
@@ -196,7 +196,7 @@ Configuration Directives
 
 **default:** *JSON*
 
-**context:** *openwaf_reqstat*
+**context:** *twaf_reqstat*
 
 指定统计信息输出格式，目前支持JSON和INFLUXDB两种格式
 
