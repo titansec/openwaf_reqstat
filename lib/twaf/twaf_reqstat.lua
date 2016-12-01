@@ -1,5 +1,5 @@
 -- Copyright (C) Miracle
--- Copyright (C) Titan, Co.Ltd.
+-- Copyright (C) OpenWAF
 
 local _M = {
     _VERSION = "0.01"
